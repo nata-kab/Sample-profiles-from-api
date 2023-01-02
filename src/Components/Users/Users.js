@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useReducer } from "react";
 import "./Users.css";
 import avatar from "../../assets/img/avatar.png";
+import * as Unicons from "@iconscout/react-unicons";
+import UilRedo from "@iconscout/react-unicons/icons/uil-redo";
+import UilMultiply from "@iconscout/react-unicons/icons/uil-multiply";
 
 const initialState = {
   usersNumber: "30",
@@ -61,8 +64,12 @@ const Users = () => {
   return (
     <div>
       <div className="OptionContainer">
-        <button onClick={getApiData}>Odśwież</button>
-        <button onClick={reset}>Resetuj ustawienia wyszukiwania</button>
+        <button onClick={getApiData}>
+          <UilRedo size="25" color="green" />
+        </button>
+        <button onClick={reset}>
+          <UilMultiply size="25" color="black" />
+        </button>
         <div>
           <select
             value={state.usersGender}
@@ -134,28 +141,40 @@ const Users = () => {
                 />
               </div>
               <div className="Section-container">
-                <b className="text"> Name: </b>
-                <div className="Data-container">
+                <div className="Row-container">
+                  <Unicons.UilUser />
+                  <b className="text"> Name: </b>
+                </div>
+                <div className="Row-container">
                   <p className="text"> {item.name.title} </p>
                   <p className="text"> {item.name.first} </p>
                   <b className="text"> {item.name.last} </b>
                 </div>
               </div>
               <div className="Section-container">
-                <b className="text"> Country: </b>
-                <div className="Data-container">
+                <div className="Row-container">
+                  <Unicons.UilMapMarker />
+                  <b className="text"> Country: </b>
+                </div>
+                <div className="Row-container">
                   <p className="text"> {item.location.country} </p>
                 </div>
               </div>
               <div className="Section-container">
-                <b className="text"> Email: </b>
-                <div className="Data-container">
+                <div className="Row-container">
+                  <Unicons.UilEnvelope />
+                  <b className="text"> Email: </b>
+                </div>
+                <div className="Row-container">
                   <p className="text"> {item.email}</p>
                 </div>
               </div>
               <div className="Section-container">
-                <b className="text"> Phone: </b>
-                <div className="Data-container">
+                <div className="Row-container">
+                  <Unicons.UilPhone />
+                  <b className="text"> Phone: </b>
+                </div>
+                <div className="Row-container">
                   <p className="text"> {item.phone}</p>
                 </div>
               </div>
