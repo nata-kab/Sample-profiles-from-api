@@ -47,7 +47,6 @@ const Users = () => {
     getApiData();
   }, [state]);
 
-
   const reset = () => {
     dispatch({ type: "initial" });
   };
@@ -61,64 +60,66 @@ const Users = () => {
 
   return (
     <div>
-      <button onClick={getApiData}>Odświez</button>
-      <button onClick={reset}>Resetuj ustawienia wyszukiwania</button>
-      <div>
-        <select
-          value={state.usersGender}
-          onChange={(event) => {
-            changeSearchingSettings(event, "usersGender");
-          }}
-        >
-          <option value="">Male and Female</option>
-          <option value="&gender=male">Male</option>
-          <option value="&gender=female">Female</option>
-        </select>
-      </div>
-      <div>
-        <label>
-          Change number of render users profiles:
+      <div className="OptionContainer">
+        <button onClick={getApiData}>Odśwież</button>
+        <button onClick={reset}>Resetuj ustawienia wyszukiwania</button>
+        <div>
           <select
-            value={state.usersNumber}
+            value={state.usersGender}
             onChange={(event) => {
-              changeSearchingSettings(event, "usersNumber");
+              changeSearchingSettings(event, "usersGender");
             }}
           >
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">20</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
-            <option value="45">45</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
+            <option value="">Male and Female</option>
+            <option value="&gender=male">Male</option>
+            <option value="&gender=female">Female</option>
           </select>
-        </label>
-      </div>
-      <div>
-        <label>
-          Select nationality:
-          <select
-            value={state.usersNationality}
-            onChange={(event) => {
-              changeSearchingSettings(event, "usersNationality");
-            }}
-          >
-            <option value=""></option>
-            <option value="&nat=us">US</option>
-            <option value="&nat=ua">UA</option>
-            <option value="&nat=tr">TR</option>
-            <option value="&nat=no">NO</option>
-            <option value="&nat=gb">GB</option>
-            <option value="&nat=fr">FR</option>
-            <option value="&nat=es">ES</option>
-            <option value="&nat=br">BR</option>
-            <option value="&nat=au">AU</option>
-          </select>
-        </label>
+        </div>
+        <div>
+          <label>
+            Number of users profiles:
+            <select
+              value={state.usersNumber}
+              onChange={(event) => {
+                changeSearchingSettings(event, "usersNumber");
+              }}
+            >
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">20</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>
+            Select nationality:
+            <select
+              value={state.usersNationality}
+              onChange={(event) => {
+                changeSearchingSettings(event, "usersNationality");
+              }}
+            >
+              <option value=""></option>
+              <option value="&nat=us">US</option>
+              <option value="&nat=ua">UA</option>
+              <option value="&nat=tr">TR</option>
+              <option value="&nat=no">NO</option>
+              <option value="&nat=gb">GB</option>
+              <option value="&nat=fr">FR</option>
+              <option value="&nat=es">ES</option>
+              <option value="&nat=br">BR</option>
+              <option value="&nat=au">AU</option>
+            </select>
+          </label>
+        </div>
       </div>
 
       <div className="Container">
@@ -132,23 +133,31 @@ const Users = () => {
                   alt=""
                 />
               </div>
-              <div className="Data-container">
+              <div className="Section-container">
                 <b className="text"> Name: </b>
-                <p className="text"> {item.name.title} </p>
-                <p className="text"> {item.name.first} </p>
-                <b className="text"> {item.name.last} </b>
+                <div className="Data-container">
+                  <p className="text"> {item.name.title} </p>
+                  <p className="text"> {item.name.first} </p>
+                  <b className="text"> {item.name.last} </b>
+                </div>
               </div>
-              <div className="Data-container">
+              <div className="Section-container">
                 <b className="text"> Country: </b>
-                <p className="text"> {item.location.country} </p>
+                <div className="Data-container">
+                  <p className="text"> {item.location.country} </p>
+                </div>
               </div>
-              <div className="Data-container">
+              <div className="Section-container">
                 <b className="text"> Email: </b>
-                <p className="text"> {item.email}</p>
+                <div className="Data-container">
+                  <p className="text"> {item.email}</p>
+                </div>
               </div>
-              <div className="Data-container">
+              <div className="Section-container">
                 <b className="text"> Phone: </b>
-                <p className="text"> {item.phone}</p>
+                <div className="Data-container">
+                  <p className="text"> {item.phone}</p>
+                </div>
               </div>
             </div>
           );
