@@ -6,7 +6,7 @@ With this app you can view sample profiles with photo, name, country, phone, ema
 This application shows my first steps in working with an external API.
 
 
-# Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
