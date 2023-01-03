@@ -1,5 +1,6 @@
 {
-  "name": "Sample-profiles-from-api",
+  "name": "Sample profiles from api",
+  "homepage": "https://nata-kab.github.io/Sample-profiles-from-api/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
