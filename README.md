@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Sample profiles
+
+
+With this app you can view sample profiles with photo, name, country, phone, email address. You can change the filters of the profiles that are displayed.
+
+This application shows my first steps in working with an external API.
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
