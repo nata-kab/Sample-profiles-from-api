@@ -62,30 +62,35 @@ const Users = () => {
   };
 
   return (
-    <div>
-      <div className="OptionContainer">
-        <button onClick={getApiData}>
-          <UilRedo size="25" color="green" />
+    <div className="app-container">
+      <div className="optionContainer">
+        <button className="button" onClick={getApiData}>
+          <UilRedo size="20" color="#696969" />
         </button>
-        <button onClick={reset}>
-          <UilMultiply size="25" color="black" />
+        <button className="button" onClick={reset}>
+          <UilMultiply size="20" color="#696969" />
         </button>
-        <div>
-          <select
-            value={state.usersGender}
-            onChange={(event) => {
-              changeSearchingSettings(event, "usersGender");
-            }}
-          >
-            <option value="">Male and Female</option>
-            <option value="&gender=male">Male</option>
-            <option value="&gender=female">Female</option>
-          </select>
-        </div>
-        <div>
+        <div className="select-container">
           <label>
-            Number of users profiles:
+            Gender:
             <select
+              className="select"
+              value={state.usersGender}
+              onChange={(event) => {
+                changeSearchingSettings(event, "usersGender");
+              }}
+            >
+              <option value="">Male and Female</option>
+              <option value="&gender=male">Male</option>
+              <option value="&gender=female">Female</option>
+            </select>
+          </label>
+        </div>
+        <div className="select-container">
+          <label>
+            Profiles number:
+            <select
+              className="select"
               value={state.usersNumber}
               onChange={(event) => {
                 changeSearchingSettings(event, "usersNumber");
@@ -93,7 +98,7 @@ const Users = () => {
             >
               <option value="5">5</option>
               <option value="10">10</option>
-              <option value="15">20</option>
+              <option value="15">15</option>
               <option value="20">20</option>
               <option value="25">25</option>
               <option value="30">30</option>
@@ -105,16 +110,17 @@ const Users = () => {
             </select>
           </label>
         </div>
-        <div>
+        <div className="select-container">
           <label>
-            Select nationality:
+            Nationality:
             <select
+              className="select"
               value={state.usersNationality}
               onChange={(event) => {
                 changeSearchingSettings(event, "usersNationality");
               }}
             >
-              <option value=""></option>
+              <option value="">all</option>
               <option value="&nat=us">US</option>
               <option value="&nat=ua">UA</option>
               <option value="&nat=tr">TR</option>
@@ -129,52 +135,52 @@ const Users = () => {
         </div>
       </div>
 
-      <div className="Container">
+      <div className="container">
         {profilesApiResult.map((item, i) => {
           return (
-            <div className="User" key={i + item.name.last + item.id.value}>
-              <div className="Img-container">
+            <div className="user" key={i + item.name.last + item.id.value}>
+              <div className="img-container">
                 <img
                   src={item.picture.large || avatar}
-                  className="App-img"
+                  className="app-img"
                   alt=""
                 />
               </div>
-              <div className="Section-container">
-                <div className="Row-container">
+              <div className="section-container">
+                <div className="row-container">
                   <Unicons.UilUser />
                   <b className="text"> Name: </b>
                 </div>
-                <div className="Row-container">
+                <div className="row-container">
                   <p className="text"> {item.name.title} </p>
                   <p className="text"> {item.name.first} </p>
                   <b className="text"> {item.name.last} </b>
                 </div>
               </div>
-              <div className="Section-container">
-                <div className="Row-container">
+              <div className="section-container">
+                <div className="row-container">
                   <Unicons.UilMapMarker />
                   <b className="text"> Country: </b>
                 </div>
-                <div className="Row-container">
+                <div className="row-container">
                   <p className="text"> {item.location.country} </p>
                 </div>
               </div>
-              <div className="Section-container">
-                <div className="Row-container">
+              <div className="section-container">
+                <div className="row-container">
                   <Unicons.UilEnvelope />
                   <b className="text"> Email: </b>
                 </div>
-                <div className="Row-container">
+                <div className="row-container">
                   <p className="text"> {item.email}</p>
                 </div>
               </div>
-              <div className="Section-container">
-                <div className="Row-container">
+              <div className="section-container">
+                <div className="row-container">
                   <Unicons.UilPhone />
                   <b className="text"> Phone: </b>
                 </div>
-                <div className="Row-container">
+                <div className="row-container">
                   <p className="text"> {item.phone}</p>
                 </div>
               </div>
