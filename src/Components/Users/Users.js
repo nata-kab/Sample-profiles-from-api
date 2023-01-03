@@ -188,6 +188,11 @@ const Users = () => {
           );
         })}
       </div>
+      <footer className="footer">
+        <a className="api-link" href="https://randomuser.me/">
+          Random user generator API
+        </a>
+      </footer>
     </div>
   );
 };
