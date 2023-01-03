@@ -1,7 +1,7 @@
-import Users from "./Components/Users/Users";
+import Page from "./components/Page/Page";
 
 function App() {
-  return <Users />;
+  return <Page />;
 }
 
 export default App;
