@@ -48,7 +48,7 @@ const UserCard = ({
           <b className="text"> Email: </b>
         </div>
         <div className="row-container">
-          <p className="text"> {email}</p>
+          <p className="text"> {email} </p>
         </div>
       </div>
 

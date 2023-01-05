@@ -11,10 +11,10 @@ const OptionsPanel = ({
   return (
     <div className="option-container">
       <button className="button" onClick={getApiData}>
-        <UilRedo size="20" color="#696969" />
+        <UilRedo size="20" color=" 	#606060" />
       </button>
       <button className="button" onClick={reset}>
-        <UilMultiply size="20" color="#696969" />
+        <UilMultiply size="20" color=" 	#606060" />
       </button>
       <div className="select-container">
         <label>
