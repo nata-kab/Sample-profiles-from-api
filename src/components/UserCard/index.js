@@ -21,7 +21,7 @@ const UserCard = ({
       </div>
 
       <div className="section-container">
-        <div className="row-container">
+        <div className="title-container">
           <UilUser />
           <b className="text"> Name: </b>
         </div>
@@ -33,7 +33,7 @@ const UserCard = ({
       </div>
 
       <div className="section-container">
-        <div className="row-container">
+        <div className="title-container">
           <UilMapMarker />
           <b className="text"> Country: </b>
         </div>
@@ -43,7 +43,7 @@ const UserCard = ({
       </div>
 
       <div className="section-container">
-        <div className="row-container">
+        <div className="title-container">
           <UilEnvelope />
           <b className="text"> Email: </b>
         </div>
@@ -53,7 +53,7 @@ const UserCard = ({
       </div>
 
       <div className="section-container">
-        <div className="row-container">
+        <div className="title-container">
           <UilPhone />
           <b className="text"> Phone: </b>
         </div>
