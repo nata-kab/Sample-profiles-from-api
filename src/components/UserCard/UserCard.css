@@ -45,5 +45,5 @@
   font-size: calc(4px + 2vmin);
   color: black;
   gap: 5px;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
