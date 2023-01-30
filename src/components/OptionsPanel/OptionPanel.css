@@ -17,7 +17,7 @@
   padding: 5px;
   border-radius: 10px;
   width: 40px;
-  box-shadow: 5px 5px 3px 3px #606060;
+  box-shadow: 5px 5px 10px 2px #606060;
 }
 
 .select {
@@ -35,5 +35,5 @@
   height: 30px;
   padding: 5px;
   border-radius: 10px;
-  box-shadow: 5px 5px 3px 3px #606060;
+  box-shadow: 5px 5px 10px 2px #606060;
 }
